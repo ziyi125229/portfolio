@@ -461,6 +461,24 @@
     </div>
 
     <div class="case-decisions">
+      <h4>多智能体怎么用</h4>
+      <div class="dec-list">
+        <div class="dec"><span class="dec-n">A1</span><div class="dec-body">
+          <b>链式分工，不用一个大 prompt 包打天下（Q→T→P）。</b>测验解析 → 型号判定 → 报告撰写拆成三个专职 agent 顺序传递，
+          每个只负责一件事、各有独立 prompt 与出参校验，单点出错不会污染整份报告。</div></div>
+        <div class="dec"><span class="dec-n">A2</span><div class="dec-body">
+          <b>心里话 3 路独立生成（Diary Pipeline ×3）。</b>3 段心里话各跑一次 agent，分别绑定「想念→不安→渴望」的情绪锚和不同素材切面，
+          从结构上根治 LLM 写情感文案「三段一个调」的毛病。</div></div>
+        <div class="dec"><span class="dec-n">A3</span><div class="dec-body">
+          <b>干扰项与正解同源产出。</b>写正确解读的那次调用里，让 agent 在同一上下文顺手生成 3 个「同处境、不同动机」的干扰项，
+          4 选 1 才有真推理感，而不是从固定池盲抽。</div></div>
+        <div class="dec"><span class="dec-n">A4</span><div class="dec-body">
+          <b>eval 闭环兜底（LLM-as-judge）。</b>每个 agent 的输出先过一道 judge 打分——查穿帮断言、套话、跑题，不达标自动重跑或回退；
+          而排盘算分交给本地确定性代码，LLM 只负责语言、不碰数字，保证缘分指数可复现。</div></div>
+      </div>
+    </div>
+
+    <div class="case-decisions">
       <h4>关键决策</h4>
       <div class="dec-list">
         <div class="dec"><span class="dec-n">01</span><div class="dec-body">
