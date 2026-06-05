@@ -1,0 +1,550 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<script>document.documentElement.className+=' js'</script>
+<title>产品作品集 · Selected Product Work</title>
+<meta name="description" content="四个独立项目，端到端涵盖产品、设计、工程、Prompt；附我做产品的方法。eval 驱动、0→1、亲手做到上线。">
+<link rel="canonical" href="https://ziyi125229.github.io/portfolio/">
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg%20xmlns%3D%27http%3A//www.w3.org/2000/svg%27%20viewBox%3D%270%200%20100%20100%27%3E%3Crect%20width%3D%27100%27%20height%3D%27100%27%20rx%3D%2722%27%20fill%3D%27%234338ca%27/%3E%3Ctext%20x%3D%2750%27%20y%3D%2755%27%20font-size%3D%2748%27%20font-family%3D%27Georgia%2Cserif%27%20fill%3D%27white%27%20text-anchor%3D%27middle%27%20dominant-baseline%3D%27central%27%3E%E2%97%88%3C/text%3E%3C/svg%3E">
+<meta property="og:type" content="website">
+<meta property="og:title" content="产品作品集 · Selected Product Work">
+<meta property="og:description" content="四个独立项目，从需求、设计、工程、Prompt 到上线一个人端到端跑通；附做产品的方法。">
+<meta property="og:url" content="https://ziyi125229.github.io/portfolio/">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="产品作品集 · Selected Product Work">
+<meta name="twitter:description" content="想清楚问题，再亲手把它做到上线。">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;0,6..72,600;1,6..72,400;1,6..72,500&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --bg:#fdfcf9;
+    --alt:#f5f3ee;
+    --surface:#ffffff;
+    --text:#1c1917;
+    --text-sec:#403a34;
+    --text-mu:#78716c;
+    --text-dim:#a8a29e;
+    --border:#e9e6df;
+    --border-hi:#d6d3ce;
+    --accent:#4338ca;
+    --accent-ink:#312a9c;
+    --accent-soft:rgba(67,56,202,.07);
+    --crimson:#a8324a;
+    --live:#16a34a;
+    --plan:#ca8a04;
+    --idea:#78716c;
+    --serif:"Newsreader",Georgia,"Songti SC","Noto Serif SC",serif;
+    --sans:-apple-system,"Inter","PingFang SC","Segoe UI",system-ui,sans-serif;
+    --mono:ui-monospace,"SFMono-Regular","Menlo",monospace;
+  }
+  *{margin:0;padding:0;box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{background:var(--bg);color:var(--text);font-family:var(--sans);
+    line-height:1.62;-webkit-font-smoothing:antialiased;font-feature-settings:"cv02","cv11";
+    word-break:normal;overflow-wrap:break-word;line-break:strict}
+  a{color:inherit;text-decoration:none}
+  b{font-weight:600;color:var(--text)}
+  .mono{font-family:var(--mono)}
+  .nb{white-space:nowrap}
+  .wrap{max-width:900px;margin:0 auto;padding:0 32px}
+  h1,h2,h3,h4{letter-spacing:-.02em}
+
+  /* editorial serif display */
+  .eyebrow{display:inline-block;font-size:12px;color:var(--accent);letter-spacing:.14em;
+    text-transform:uppercase;font-weight:700;margin-bottom:14px}
+  .sec-head{margin-bottom:48px}
+  .sec-head h2{font-family:var(--serif);font-size:38px;font-weight:500;margin-bottom:10px;line-height:1.1}
+  .sec-head .sub{color:var(--text-sec);font-size:15px;max-width:600px;line-height:1.7}
+
+  .tag{font-size:11.5px;color:var(--text-sec);font-family:var(--mono);white-space:nowrap;
+    background:var(--alt);border:1px solid var(--border);border-radius:5px;padding:2px 9px;display:inline-block}
+
+  /* nav */
+  nav{position:sticky;top:0;background:rgba(253,252,249,.85);backdrop-filter:blur(14px);
+    -webkit-backdrop-filter:blur(14px);border-bottom:1px solid var(--border);z-index:50}
+  .nav-inner{display:flex;justify-content:space-between;align-items:center;
+    padding:17px 32px;max-width:900px;margin:0 auto;font-size:14px}
+  .nav-brand{font-weight:600;letter-spacing:-.015em}
+  .nav-brand .dim{color:var(--text-dim);font-weight:500}
+  .nav-links{display:flex;gap:26px;color:var(--text-mu)}
+  .nav-links a{transition:color .15s;position:relative;white-space:nowrap}
+  .nav-links a:hover{color:var(--text)}
+
+  /* hero */
+  .hero{padding:104px 0 84px}
+  .status-pill{display:inline-flex;align-items:center;gap:8px;font-size:13px;color:var(--text-sec);
+    border:1px solid var(--border);border-radius:999px;padding:6px 14px;margin-bottom:34px;background:var(--surface)}
+  .status-pill .dot{width:7px;height:7px;border-radius:50%;background:var(--live);
+    box-shadow:0 0 0 4px rgba(22,163,74,.14);animation:pulse 2.6s ease-in-out infinite}
+  @keyframes pulse{0%,100%{box-shadow:0 0 0 4px rgba(22,163,74,.14)}50%{box-shadow:0 0 0 7px rgba(22,163,74,.05)}}
+  .hero-name{font-family:var(--serif);font-size:84px;line-height:1;font-weight:600;letter-spacing:-.03em;margin-bottom:14px}
+  .hero-name .en{font-size:24px;font-style:italic;font-weight:400;color:var(--text-dim);margin-left:14px;letter-spacing:0;vertical-align:middle}
+  .hero-role{font-size:14px;color:var(--text-mu);letter-spacing:.05em;font-weight:600;margin-bottom:30px}
+  .hero-role b{color:var(--accent);font-weight:600}
+  .hero-tagline{font-family:var(--serif);font-size:31px;line-height:1.3;font-weight:500;color:var(--text);margin-bottom:24px;letter-spacing:-.01em}
+  .hero-tagline em{font-style:italic;color:var(--accent)}
+  .hero-lead{font-size:17px;color:var(--text-sec);max-width:680px;line-height:1.78}
+  .hero-lead b{color:var(--text);font-weight:600}
+  .hero-meta{display:flex;flex-wrap:wrap;gap:8px;margin-top:38px}
+  .chip{font-size:13px;color:var(--text-sec);background:var(--alt);
+    border:1px solid var(--border);border-radius:999px;padding:6px 14px;white-space:nowrap}
+
+  section{padding:78px 0;border-top:1px solid var(--border)}
+
+  /* education */
+  .edu{display:grid;grid-template-columns:160px 1fr;gap:34px;padding:26px 0;border-top:1px solid var(--border)}
+  .edu:first-child{border-top:none;padding-top:0}
+  .edu-date{font-family:var(--mono);font-size:13px;color:var(--text-mu);padding-top:5px;white-space:nowrap}
+  .edu-school{font-size:19px;font-weight:600;letter-spacing:-.015em}
+  .edu-school .rank{display:inline-block;font-size:11px;color:var(--crimson);background:rgba(168,50,74,.07);
+    border:1px solid rgba(168,50,74,.16);border-radius:5px;padding:2px 8px;font-weight:600;margin-left:8px;
+    vertical-align:middle;white-space:nowrap}
+  .edu-major{font-size:14.5px;color:var(--text-sec);margin:5px 0 10px}
+  .edu-courses{font-size:13px;color:var(--text-mu);line-height:1.8}
+
+  /* ===== EXPERIENCE timeline ===== */
+  .exp-list{display:flex;flex-direction:column}
+  .exp{display:grid;grid-template-columns:160px 1fr;gap:34px;padding:30px 0;border-top:1px solid var(--border)}
+  .exp:first-child{border-top:none;padding-top:0}
+  .exp-date{font-family:var(--mono);font-size:13px;color:var(--text-mu);padding-top:6px;letter-spacing:.01em;white-space:nowrap}
+  .exp-co{font-size:21px;font-weight:600;margin-bottom:5px;letter-spacing:-.015em}
+  .exp-co .badge{display:inline-block;font-size:10.5px;color:var(--accent);
+    background:var(--accent-soft);border-radius:5px;padding:2px 8px;font-weight:600;
+    letter-spacing:.04em;margin-left:8px;vertical-align:middle;white-space:nowrap}
+  .exp-role{font-size:14.5px;color:var(--text-sec);margin-bottom:16px}
+  .exp-bullets{display:flex;flex-direction:column;gap:11px;margin-bottom:16px}
+  .exp-bullet{display:flex;gap:12px;font-size:14px;color:var(--text-sec);line-height:1.72}
+  .exp-bullet::before{content:"";flex:none;width:14px;height:1px;background:var(--text-dim);margin-top:13px}
+  .exp-bullet b{color:var(--text);font-weight:600}
+  .exp-bullet .hl{color:var(--accent);font-weight:600;white-space:nowrap}
+  .exp-tags{display:flex;flex-wrap:wrap;gap:6px}
+
+  /* ===== FEATURED case study ===== */
+  .featured{background:var(--surface);border:1px solid var(--border);border-radius:18px;padding:44px;
+    transition:border-color .2s,box-shadow .2s}
+  .featured:hover{border-color:var(--border-hi);box-shadow:0 1px 0 var(--border)}
+  .case-head{display:flex;justify-content:space-between;align-items:flex-start;gap:20px;flex-wrap:wrap;margin-bottom:18px}
+  .case-title{font-family:var(--serif);font-size:40px;font-weight:500;line-height:1.05;letter-spacing:-.02em}
+  .case-title .sub-zh{font-size:21px;color:var(--text-sec);font-weight:400;margin-left:10px;font-family:var(--sans)}
+  .case-url{font-size:13px;color:var(--text-mu);margin-top:9px;font-family:var(--mono)}
+  .status{display:inline-flex;align-items:center;gap:7px;font-size:12px;font-weight:600;
+    border-radius:999px;padding:5px 12px;border:1px solid var(--border);background:var(--surface);white-space:nowrap}
+  .status .sdot{width:6px;height:6px;border-radius:50%}
+  .status.live{color:var(--live)} .status.live .sdot{background:var(--live);box-shadow:0 0 0 3px rgba(22,163,74,.16)}
+  .status.plan{color:var(--plan)} .status.plan .sdot{background:var(--plan)}
+  .status.idea{color:var(--idea)} .status.idea .sdot{background:var(--idea)}
+  .case-pitch{color:var(--text-sec);font-size:16.5px;line-height:1.78;margin-bottom:30px;max-width:720px}
+  .case-pitch b{color:var(--text)}
+  .case-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:12px;margin-bottom:34px}
+  .case-cell{background:var(--alt);border:1px solid var(--border);border-radius:10px;padding:17px 20px}
+  .cell-label{font-size:11px;color:var(--text-mu);letter-spacing:.1em;text-transform:uppercase;font-weight:700;margin-bottom:8px}
+  .cell-val{font-size:14.5px;line-height:1.55}
+  .cell-val .mono{font-size:12.5px;color:var(--text-mu)}
+  .case-decisions h4{font-size:12px;color:var(--text-mu);letter-spacing:.1em;text-transform:uppercase;
+    font-weight:700;margin-bottom:20px}
+  .dec-list{display:flex;flex-direction:column;gap:18px}
+  .dec{display:flex;gap:16px}
+  .dec-n{font-family:var(--mono);font-size:13px;color:var(--accent);flex:none;padding-top:3px;width:24px;font-weight:600}
+  .dec-body{font-size:14.5px;color:var(--text-sec);line-height:1.72}
+  .dec-body b{color:var(--text)}
+  .case-tags{display:flex;flex-wrap:wrap;gap:7px;margin-top:30px;padding-top:24px;border-top:1px solid var(--border);align-items:center}
+  .case-link{margin-left:auto;font-size:13px;color:var(--accent);font-weight:600;display:inline-flex;align-items:center;gap:5px;white-space:nowrap}
+  .case-link:hover{color:var(--accent-ink)}
+
+  /* horizontal project block (independent projects) */
+  .pblock{display:grid;grid-template-columns:300px 1fr;gap:0;background:var(--surface);
+    border:1px solid var(--border);border-radius:16px;overflow:hidden;transition:border-color .2s,box-shadow .2s}
+  .pblock:hover{border-color:var(--border-hi);box-shadow:0 1px 0 var(--border)}
+  .pblock + .pblock,.pblock + .featured,.featured + .pblock{margin-top:20px}
+  .pthumb{position:relative;overflow:hidden;border-right:1px solid var(--border);min-height:240px;background:#2b2570}
+  .pshot{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;display:block}
+  .pthumb.t-rd .pshot{object-position:top center}
+  .pthumb.t-bh{background:#efe2d6}
+  .pthumb.t-bh .pshot{object-position:center 64%}
+  .pthumb.t-sr{background:#dfe6e0}
+  .pthumb.t-sr .pshot{object-position:center center}
+  .pthumb-cap{position:absolute;left:0;right:0;bottom:0;padding:48px 24px 20px;color:#fff;
+    background:linear-gradient(to top,rgba(17,14,38,.95) 0%,rgba(17,14,38,.72) 50%,rgba(17,14,38,0) 100%)}
+  .pstat-big{font-family:var(--serif);font-size:44px;line-height:1;font-weight:600}
+  .pstat-label{font-size:12px;margin-top:7px;line-height:1.5;color:rgba(255,255,255,.85)}
+  .pbody{padding:30px 32px;display:flex;flex-direction:column}
+  .pb-head{display:flex;justify-content:space-between;align-items:flex-start;gap:14px;margin-bottom:6px}
+  .pb-title{font-family:var(--serif);font-size:25px;font-weight:500;line-height:1.15}
+  .pb-sub{font-size:12.5px;color:var(--text-mu);font-family:var(--mono);margin-top:5px}
+  .pb-pitch{font-size:14.5px;color:var(--text-sec);line-height:1.72;margin:14px 0 16px}
+  .pb-pitch b{color:var(--text)}
+  .pb-dec{display:flex;flex-direction:column;gap:9px;margin-bottom:16px}
+  .pb-dec .d{display:flex;gap:11px;font-size:13.5px;color:var(--text-sec);line-height:1.65}
+  .pb-dec .d::before{content:"";flex:none;width:13px;height:1px;background:var(--accent);margin-top:11px;opacity:.7}
+  .pb-dec .d b{color:var(--text)}
+  .pb-foot{display:flex;flex-wrap:wrap;gap:7px;align-items:center;margin-top:auto;padding-top:14px;border-top:1px solid var(--border)}
+  .pb-foot .case-link{margin-left:auto}
+
+  /* approach */
+  .approach{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+  .ap{padding:26px;border:1px solid var(--border);border-radius:12px;background:var(--surface)}
+  .ap-n{font-family:var(--mono);font-size:12px;color:var(--accent);margin-bottom:12px;font-weight:600}
+  .ap-t{font-size:16px;font-weight:600;margin-bottom:8px}
+  .ap-d{font-size:14px;color:var(--text-sec);line-height:1.72}
+
+  /* skills */
+  .skills{display:flex;flex-direction:column;gap:18px}
+  .sk-row{display:grid;grid-template-columns:120px 1fr;gap:24px;align-items:start;padding-bottom:18px;border-bottom:1px solid var(--border)}
+  .sk-row:last-child{border-bottom:none;padding-bottom:0}
+  .sk-label{font-size:13px;color:var(--text-mu);letter-spacing:.06em;text-transform:uppercase;font-weight:700;padding-top:4px;white-space:nowrap}
+  .sk-vals{display:flex;flex-wrap:wrap;gap:7px}
+  .sk-vals .desc{font-size:14.5px;color:var(--text-sec);line-height:1.72}
+
+  /* contact */
+  .contact{display:flex;flex-wrap:wrap;gap:12px}
+  .ct{display:flex;align-items:center;gap:14px;border:1px solid var(--border);border-radius:12px;
+    padding:18px 22px;background:var(--surface);min-width:240px;transition:border-color .2s}
+  .ct:hover{border-color:var(--border-hi)}
+  .ct-icon{width:34px;height:34px;border-radius:8px;background:var(--accent-soft);display:flex;
+    align-items:center;justify-content:center;color:var(--accent);font-size:15px;font-weight:600;flex:none}
+  .ct-label{font-size:11px;color:var(--text-mu);letter-spacing:.06em;text-transform:uppercase;font-weight:700;margin-bottom:2px}
+  .ct-val{font-size:14px;font-family:var(--mono)}
+
+  footer{padding:54px 0 70px;border-top:1px solid var(--border);color:var(--text-mu);font-size:13px;
+    display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px}
+
+  @media (max-width:760px){
+    .hero{padding:60px 0 52px}
+    .hero-name{font-size:52px}
+    .hero-name .en{font-size:17px;display:block;margin:8px 0 0}
+    .hero-tagline{font-size:24px}
+    .sec-head h2{font-size:28px}
+    .case-title{font-size:30px}
+    .case-grid,.approach{grid-template-columns:1fr}
+    .pblock{grid-template-columns:1fr}
+    .pthumb{min-height:170px;border-right:none;border-bottom:1px solid var(--border)}
+    .exp,.edu,.sk-row{grid-template-columns:1fr;gap:8px;padding:22px 0}
+    .exp-date,.edu-date,.sk-label{padding-top:0}
+    .nav-links{gap:14px;font-size:13px}
+    section{padding:54px 0}
+    .featured{padding:28px 22px}
+    .pbody{padding:24px}
+    .sec-head{margin-bottom:34px}
+    .case-head{flex-direction:column;align-items:flex-start}
+  }
+
+  /* ===== taste pass · 动效 / 触感 / 质感 / 排版精修 ===== */
+  :focus-visible{outline:2px solid var(--accent);outline-offset:3px;border-radius:5px}
+  .mono,.hl,.pstat-big,.exp-date,.edu-date,.case-url,.pb-sub,.cell-val{font-variant-numeric:tabular-nums}
+  .hero-name,.hero-tagline,.sec-head h2,.case-title,.pb-title,.exp-co,.edu-school{text-wrap:balance}
+  .hero-lead,.case-pitch,.pb-pitch,.ap-d,.sec-head .sub,.dec-body,.exp-bullet,.edu-courses{text-wrap:pretty}
+  section[id]{scroll-margin-top:84px}
+
+  /* 触感：抬升 + 染色阴影 + 按下回弹 */
+  .featured,.pblock,.ap,.ct{transition:opacity .6s cubic-bezier(.2,.7,.2,1),
+    transform .4s cubic-bezier(.2,.7,.2,1),box-shadow .35s ease,border-color .25s ease}
+  .featured:hover,.pblock:hover{transform:translateY(-3px);
+    box-shadow:0 20px 44px -26px rgba(40,34,90,.42),0 2px 0 var(--border)}
+  .ap:hover,.ct:hover{transform:translateY(-2px);box-shadow:0 14px 30px -22px rgba(40,34,90,.38)}
+  a.ct:active,.featured:active,.pblock:active{transform:translateY(-1px) scale(.997)}
+  .case-link,.nav-links a{transition:color .15s ease,transform .15s ease}
+  .case-link:active,.nav-links a:active{transform:translateY(1px)}
+  .pshot{transition:transform .5s cubic-bezier(.2,.7,.2,1)}
+  .pblock:hover .pshot{transform:scale(1.04)}
+
+  /* 颗粒质感 */
+  .grain{position:fixed;inset:0;z-index:60;pointer-events:none;opacity:.04;mix-blend-mode:multiply;
+    background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='150' height='150'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='2' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");background-size:150px 150px}
+
+  /* 首屏入场 */
+  .js .hero .status-pill,.js .hero-name,.js .hero-role,.js .hero-tagline,.js .hero-lead,.js .hero-meta{
+    opacity:0;animation:heroUp .7s cubic-bezier(.2,.7,.2,1) forwards}
+  .js .hero-name{animation-delay:.05s}.js .hero-role{animation-delay:.11s}
+  .js .hero-tagline{animation-delay:.17s}.js .hero-lead{animation-delay:.25s}.js .hero-meta{animation-delay:.33s}
+  @keyframes heroUp{from{opacity:0;transform:translateY(14px)}to{opacity:1;transform:none}}
+
+  /* 滚动逐段淡入（隐藏态仅在未进入视口时生效，避免压制 hover） */
+  .sec-head,.edu,.sk-row{transition:opacity .6s cubic-bezier(.2,.7,.2,1),transform .6s cubic-bezier(.2,.7,.2,1)}
+  .js .sec-head:not(.is-in),.js .edu:not(.is-in),.js .exp:not(.is-in),.js .pblock:not(.is-in),
+  .js .featured:not(.is-in),.js .ap:not(.is-in),.js .sk-row:not(.is-in),.js .ct:not(.is-in){
+    opacity:0;transform:translateY(18px)}
+
+  @media (prefers-reduced-motion:reduce){
+    *,*::before,*::after{animation-duration:.001ms!important;animation-iteration-count:1!important;
+      transition-duration:.001ms!important;scroll-behavior:auto!important}
+    .grain{display:none}
+    .js .sec-head,.js .edu,.js .exp,.js .pblock,.js .featured,.js .ap,.js .sk-row,.js .ct,
+    .js .hero .status-pill,.js .hero-name,.js .hero-role,.js .hero-tagline,.js .hero-lead,.js .hero-meta{
+      opacity:1!important;transform:none!important;animation:none!important}
+  }
+
+  /* ===== 可见重塑 · 编号区块 / 关键词高亮 / 卡片纵深 ===== */
+  body{counter-reset:sec}
+  section{border-top:none}
+  .sec-head{counter-increment:sec;border-top:1px solid var(--border-hi);padding-top:36px;margin-bottom:46px}
+  #education .sec-head{border-top:none;padding-top:0}
+  .sec-head .eyebrow::before{content:counter(sec,decimal-leading-zero) "  ·  ";color:var(--text-dim);font-weight:700}
+  .sec-head h2{font-size:46px}
+
+  /* hero：名字背后的柔光 + 关键词高亮底纹 */
+  .hero{position:relative;isolation:isolate}
+  .hero-name{position:relative}
+  .hero-name::before{content:"";position:absolute;z-index:-1;left:135px;top:50%;transform:translate(-50%,-50%);
+    width:500px;height:300px;pointer-events:none;
+    background:radial-gradient(50% 50% at 50% 50%,rgba(67,56,202,.16),transparent 70%)}
+  @media (max-width:760px){.hero-name::before{left:84px;width:340px;height:210px}}
+  .hero-tagline em{background-image:linear-gradient(transparent 56%,rgba(67,56,202,.18) 56% 93%,transparent 93%);
+    background-repeat:no-repeat;padding:0 .1em;border-radius:2px}
+
+  /* 卡片：常驻柔和投影 + 更大圆角 */
+  .featured,.pblock{border-radius:22px;
+    box-shadow:0 1px 2px rgba(40,34,90,.05),0 18px 40px -26px rgba(40,34,90,.22)}
+  .ap,.ct,.case-cell{border-radius:14px}
+</style>
+</head>
+<body>
+<div class="grain" aria-hidden="true"></div>
+
+<nav>
+  <div class="nav-inner">
+    <div class="nav-brand">产品作品集 <span class="dim">· Selected Work</span></div>
+    <div class="nav-links">
+      <a href="#projects">项目</a>
+      <a href="#approach">方法</a>
+    </div>
+  </div>
+</nav>
+
+<!-- HERO -->
+<header class="hero wrap">
+  <h1 class="hero-name">产品作品集<span class="en">Selected Work</span></h1>
+  <p class="hero-tagline">想清楚问题，再亲手把它<em>做到上线</em>。</p>
+  <p class="hero-lead">四个独立项目，从需求、设计、工程、Prompt 到上线，<b>一个人端到端跑通</b>；
+    后附我做产品的方法。每个项目都把 <b>eval</b> 当地基，能点开就有真东西。</p>
+  <div class="hero-meta">
+    <span class="chip">🛠 策略 · AIGC · 0→1 · eval 驱动</span>
+  </div>
+</header>
+
+<!-- PROJECTS -->
+<section id="projects" class="wrap">
+  <div class="sec-head">
+    <div class="eyebrow">Projects</div>
+    <h2>项目经历</h2>
+    <div class="sub">四个独立项目，端到端涵盖产品、设计、工程、Prompt。<span class="nb">三个已上线</span>、<span class="nb">可点开真用</span>，<span class="nb">一个在内测</span>。</div>
+  </div>
+
+  <!-- 百城花信 -->
+  <article class="pblock">
+    <div class="pthumb t-bh">
+      <img class="pshot" src="shots/baicheng.jpg" alt="百城花信 · 中国市花交互地图截图，地图上标注各城市市花" loading="lazy">
+      <div class="pthumb-cap">
+        <div class="pstat-big">42 城</div>
+        <div class="pstat-label">22 市花 · 12 月花信 · 92 处赏花胜地</div>
+      </div>
+    </div>
+    <div class="pbody">
+      <div class="pb-head">
+        <div>
+          <div class="pb-title">百城花信</div>
+          <div class="pb-sub">中国市花交互地图 · 零依赖单文件 PWA</div>
+        </div>
+        <span class="status live"><span class="sdot"></span>已上线</span>
+      </div>
+      <p class="pb-pitch">一张可交互的中国城市市花地图：切月份看花信由南向北流转，点城市看市花谱、花语诗词与赏花胜地。
+        核心判断是<b>把地图当数据，不当插画</b>，地理正确性优先、再谈视觉。</p>
+      <div class="pb-dec">
+        <div class="d"><span><b>同源投影解决「地图不准」。</b>底图用真实行政边界投影成 SVG，城市点用同一投影算坐标，城市天然落在对的省里，再用无头浏览器截图人眼核验离群点。</span></div>
+        <div class="d"><span><b>92 处赏花点自动配图、宁缺勿错。</b>英文 / 拼音精选查询前置、砍掉泛化兜底、加 SVG 与尺寸过滤，抓取结果人眼逐张核验才入库。</span></div>
+        <div class="d"><span><b>22 种花纯 Canvas 手绘。</b>40+ 个绘制函数做分层水彩晕染，零图形库；PWA 离线可用 + 完整 SEO。</span></div>
+      </div>
+      <div class="pb-foot">
+        <span class="tag">SVG 投影</span>
+        <span class="tag">Canvas 水彩</span>
+        <span class="tag">PWA</span>
+        <span class="tag">单文件 11.8k 行</span>
+        <a class="case-link" href="https://ziyi125229.github.io/Baicheng-huaxin/" target="_blank">打开地图 ↗</a>
+      </div>
+    </div>
+  </article>
+
+  <!-- 静室 Still Room -->
+  <article class="pblock">
+    <div class="pthumb t-sr">
+      <img class="pshot" src="shots/stillroom.jpg" alt="静室 · 沉浸式自习室，晨光森林晨雾实景场景" loading="lazy">
+      <div class="pthumb-cap">
+        <div class="pstat-big">6 场景</div>
+        <div class="pstat-label">插画 / 实景双模式 · 程序化白噪音 · 5 专注工具</div>
+      </div>
+    </div>
+    <div class="pbody">
+      <div class="pb-head">
+        <div>
+          <div class="pb-title">静室 · Still Room</div>
+          <div class="pb-sub">沉浸式自习室 · 零依赖单文件 PWA</div>
+        </div>
+        <span class="status live"><span class="sdot"></span>已上线</span>
+      </div>
+      <p class="pb-pitch">可切换场景的沉浸式自习室：进入任一场景自动播放对应自然白噪音，配极简专注工具，
+        帮你<b>安放此刻的专注</b>。6 个场景按一天光线排列，从晨光森林到壁炉雪夜。</p>
+      <div class="pb-dec">
+        <div class="d"><span><b>白噪音零音频文件。</b>雨声 / 海浪 / 篝火 / 森林 / 咖啡馆全用 Web Audio 实时合成，可多音轨叠加混音，跟随场景自动播放。</span></div>
+        <div class="d"><span><b>插画 / 实景双视觉模式。</b>每个场景在手绘 SVG（矢量、离线）与本地高清照片间一键切换，配 Canvas 粒子（雨丝 / 落雪 / 樱花 / 波光）。</span></div>
+        <div class="d"><span><b>5 个专注工具 + 极简抗干扰。</b>番茄钟 / 正计时 / 今日要事 / 4-7-8 呼吸 / 声音混音，鼠标静止自动隐藏界面，PWA 可装成 App。</span></div>
+      </div>
+      <div class="pb-foot">
+        <span class="tag">Web Audio 合成</span>
+        <span class="tag">手绘 SVG</span>
+        <span class="tag">Canvas 粒子</span>
+        <span class="tag">PWA</span>
+        <a class="case-link" href="https://ziyi125229.github.io/still-room/" target="_blank">进入静室 ↗</a>
+      </div>
+    </div>
+  </article>
+
+  <!-- RisingDeck (Kickstarter) -->
+  <article class="pblock">
+    <div class="pthumb t-rd">
+      <img class="pshot" src="shots/risingdeck.jpg" alt="RisingDeck · Kickstarter 上升品类预测榜实时榜单截图，top-5 命中率 33%" loading="lazy">
+      <div class="pthumb-cap">
+        <div class="pstat-big">33%</div>
+        <div class="pstat-label">top-5 命中率 · 季节性基准 15% · 照搬上月 5%</div>
+      </div>
+    </div>
+    <div class="pbody">
+      <div class="pb-head">
+        <div>
+          <div class="pb-title">RisingDeck</div>
+          <div class="pb-sub">Kickstarter 上升品类预测榜 · 数据产品</div>
+        </div>
+        <span class="status live"><span class="sdot"></span>已上线</span>
+      </div>
+      <p class="pb-pitch">用 Kickstarter 早期领先指标，提前 1–2 个月预测下个<b>升温的子品类</b>，每月公开预测并公示真实命中率。
+        <b>核心不是产品，是 eval</b>，回测 top-5 命中率能不能打赢 naive baseline。</p>
+      <div class="pb-dec">
+        <div class="d"><span><b>防时间泄漏是地基。</b>所有取数走唯一 <span class="mono">Panel.as_of(date)</span> 闸口，walk-forward 滚动回测，绕过即视为 bug。</span></div>
+        <div class="d"><span><b>同口径打基准。</b>主指标 top-5 命中率，与 persistence 和 seasonal 两个 naive baseline 同一 scorer 对比，后 24 个月滚动评估。</span></div>
+        <div class="d"><span><b>两段式落地。</b>点开品类再预测「这一类里进行中的项目谁最可能达成目标」，结果未揭晓、是真预测；上月战绩对错全公示。</span></div>
+      </div>
+      <div class="pb-foot">
+        <span class="tag">LightGBM ranker</span>
+        <span class="tag">walk-forward</span>
+        <span class="tag">backtest eval</span>
+        <span class="tag">Python · Vercel</span>
+        <a class="case-link" href="https://web-ziyis-projects-0a341155.vercel.app" target="_blank">看实时榜单 ↗</a>
+      </div>
+    </div>
+  </article>
+
+  <!-- 测对儿 (hero case) -->
+  <article class="featured">
+    <div class="case-head">
+      <div>
+        <div class="case-title">测对儿<span class="sub-zh">CèDuì'r · 关系测评小程序</span></div>
+        <div class="case-url">微信小程序 · multi-agent 报告引擎</div>
+      </div>
+      <span class="status plan"><span class="sdot"></span>开发中 · 内测</span>
+    </div>
+
+    <p class="case-pitch">用 AI 测两个人的关系底色，恋爱、友情都能测。产出是
+      <b>关系型号（类 MBTI）+ 逐项可验证的缘分指数 + AI 写给彼此的 3 段心里话</b>；
+      算分引擎融合性格匹配与传统命理两路信号，定位在「性格匹配 / 情感分析 / 相处洞察」。
+      报告主打「截图金句 + 一键邀 TA 反测 + 打脸对照」做自传播引擎。</p>
+
+    <div class="case-grid">
+      <div class="case-cell"><div class="cell-label">Role</div>
+        <div class="cell-val">独立产品 · 0→1<br><span class="mono">PM · Design · Eng · Prompt</span></div></div>
+      <div class="case-cell"><div class="cell-label">Stack</div>
+        <div class="cell-val">微信小程序 · Node / Express<br><span class="mono">LLM Gateway · lunar-javascript</span></div></div>
+      <div class="case-cell"><div class="cell-label">Engine</div>
+        <div class="cell-val">Multi-Agent 编排 + eval 反馈<br><span class="mono">Q→T→P · Diary Pipeline ×3</span></div></div>
+      <div class="case-cell"><div class="cell-label">Scale</div>
+        <div class="cell-val">16 型号 × 136 关系组合<br><span class="mono">32 专属命名 · 104 自动拼名</span></div></div>
+    </div>
+
+    <div class="case-decisions">
+      <h4>关键决策</h4>
+      <div class="dec-list">
+        <div class="dec"><span class="dec-n">01</span><div class="dec-body">
+          <b>定位反「玄学黑箱」。</b>产品定位为「性格匹配 / 情感分析 / 相处洞察」，传统命理只是其中一路特征信号；
+          底层不做 mock 套话、每一分可追溯，这是这类产品站得住的前提。</div></div>
+        <div class="dec"><span class="dec-n">02</span><div class="dec-body">
+          <b>透明算分，可验证才可信。</b>缘分指数 = 印记契合（八字四柱）70% + 型号匹配（4 维度）30% + 关系加成，
+          每一分摊开给用户看。可验证 = 可信任 = 可分享。</div></div>
+        <div class="dec"><span class="dec-n">03</span><div class="dec-body">
+          <b>命理逻辑真做。</b>用 lunar 真排盘 + 五行生克 / 四柱加权的确定性逻辑在本地算，
+          而非套话生成，这是结果可信度的地基。</div></div>
+        <div class="dec"><span class="dec-n">04</span><div class="dec-body">
+          <b>3 段心里话：emotion + focus 双锚点。</b>解决 LLM 写情感文案两大病——三段一个调、瞎编一次性事件。
+          用情绪锚（想念→不安→渴望）加素材切面分轨，禁止「你昨天做了 X」这类穿帮断言，只改写 TA 的习惯模式。</div></div>
+        <div class="dec"><span class="dec-n">05</span><div class="dec-body">
+          <b>4 选 1 干扰项同源生成。</b>旧版从固定池随机抽，干扰项跟此刻处境无关、像盲猜；
+          改为后端 prompt 同步输出 3 个「同处境同语气、不同动机」的干扰项，4 选 1 才有真推理感。</div></div>
+        <div class="dec"><span class="dec-n">06</span><div class="dec-body">
+          <b>报告 = 增长引擎，不是结论页。</b>截图金句 + 一键邀 TA 反测 + 打脸对照，为朋友圈 / 小红书自传播专门设计；
+          埋点全链路落盘，后台实时看转化分布。</div></div>
+      </div>
+    </div>
+
+    <div class="case-tags">
+      <span class="tag">multi-agent</span>
+      <span class="tag">prompt eval</span>
+      <span class="tag">LLM-as-judge</span>
+      <span class="tag">lunar-bazi</span>
+      <span class="tag">type-system</span>
+      <span class="tag">viral-by-design</span>
+      <span class="tag">WeChat-miniprogram</span>
+    </div>
+  </article>
+</section>
+
+<!-- APPROACH -->
+<section id="approach" class="wrap">
+  <div class="sec-head">
+    <div class="eyebrow">How I Work</div>
+    <h2>做产品的方法</h2>
+  </div>
+  <div class="approach">
+    <div class="ap"><div class="ap-n">01</div>
+      <div class="ap-t">问题先于功能</div>
+      <div class="ap-d">每个决策前先问「这个为谁解决什么」。用 office-hours 六问、premortem 找飞轮反向，宁可砍掉一个 feature 也不做模糊需求。</div></div>
+    <div class="ap"><div class="ap-n">02</div>
+      <div class="ap-t">eval 是地基，不是补救</div>
+      <div class="ap-d">AI 产品没有 eval 就只能靠 vibe。一开始就建可量化指标、同口径 baseline 与 LLM-as-judge，每次迭代都跑分、留痕可复盘——大模型评测项目的 70→92 和 RisingDeck 的 33% vs 5% 都是这么来的。</div></div>
+    <div class="ap"><div class="ap-n">03</div>
+      <div class="ap-t">端到端，亲手做完一遍</div>
+      <div class="ap-d">PM + Design + Eng + Prompt 一个人闭环。不是炫技，是「懂代价」才能做出「懂代价的决策」。</div></div>
+    <div class="ap"><div class="ap-n">04</div>
+      <div class="ap-t">传播写进产品里</div>
+      <div class="ap-d">不靠投放，靠产品本身让人想分享。截图金句、双向反测、社交对照，分享机制是设计阶段就植入的核心交互，不是事后加的按钮。</div></div>
+  </div>
+</section>
+
+<footer class="wrap">
+  <div>© 2026 · 产品作品集 · Selected Work</div>
+  <div class="mono">made by hand · single file</div>
+</footer>
+
+<!-- 滚动逐段淡入 -->
+<script>
+(function(){
+  var sel='.sec-head,.edu,.exp,.pblock,.featured,.ap,.sk-row,.ct';
+  var els=[].slice.call(document.querySelectorAll(sel));
+  document.querySelectorAll('section').forEach(function(sec){
+    [].slice.call(sec.querySelectorAll(sel)).forEach(function(el,i){
+      el.style.transitionDelay=(Math.min(i,6)*55)+'ms';
+    });
+  });
+  if(!('IntersectionObserver' in window)){ els.forEach(function(el){el.classList.add('is-in');}); return; }
+  var io=new IntersectionObserver(function(entries){
+    entries.forEach(function(e){
+      if(e.isIntersecting){
+        var t=e.target; t.classList.add('is-in'); io.unobserve(t);
+        setTimeout(function(){ t.style.transitionDelay=''; },800);
+      }
+    });
+  },{rootMargin:'0px 0px -7% 0px',threshold:.06});
+  els.forEach(function(el){ io.observe(el); });
+})();
+</script>
+
+</body>
+</html>
