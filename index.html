@@ -445,15 +445,15 @@
     </div>
 
     <p class="case-pitch">用 AI 测两个人的关系底色，恋爱、友情都能测。产出是
-      <b>关系型号（类 MBTI）+ 逐项可验证的缘分指数 + AI 写给彼此的 3 段心里话</b>；
-      算分引擎融合性格匹配与传统命理两路信号，定位在「性格匹配 / 情感分析 / 相处洞察」。
-      报告主打「截图金句 + 一键邀 TA 反测 + 打脸对照」做自传播引擎。</p>
+      <b>关系型号（类 MBTI）+ 逐项可验证的契合指数 + 7 个 Agent 实时写给彼此的 3 段心里话</b>；
+      纯性格型号驱动、不掺玄学，定位在「性格匹配 / 情感分析 / 相处洞察」。
+      报告主打「分享卡截图金句 + 问 TA 实时回话 + 一键邀 TA 反测」做自传播引擎。</p>
 
     <div class="case-grid">
       <div class="case-cell"><div class="cell-label">Role</div>
         <div class="cell-val">独立产品 · 0→1<br><span class="mono">PM · Design · Eng · Prompt</span></div></div>
       <div class="case-cell"><div class="cell-label">Stack</div>
-        <div class="cell-val">multi-agent 多智能体 · Node / Express<br><span class="mono">LLM Gateway · lunar-javascript</span></div></div>
+        <div class="cell-val">multi-agent 多智能体 · Node / Express<br><span class="mono">DeepSeek · Vercel serverless</span></div></div>
       <div class="case-cell"><div class="cell-label">Engine</div>
         <div class="cell-val">Multi-Agent 编排 + eval 反馈<br><span class="mono">Q→T→P · Diary Pipeline ×3</span></div></div>
       <div class="case-cell"><div class="cell-label">Scale</div>
@@ -474,7 +474,7 @@
           4 选 1 才有真推理感，而不是从固定池盲抽。</div></div>
         <div class="dec"><span class="dec-n">A4</span><div class="dec-body">
           <b>eval 闭环兜底（LLM-as-judge）。</b>每个 agent 的输出先过一道 judge 打分——查穿帮断言、套话、跑题，不达标自动重跑或回退；
-          而排盘算分交给本地确定性代码，LLM 只负责语言、不碰数字，保证缘分指数可复现。</div></div>
+          而契合算分交给本地确定性代码，LLM 只负责语言、不碰数字，保证契合指数可复现、明细可验证。</div></div>
       </div>
     </div>
 
@@ -482,14 +482,14 @@
       <h4>关键决策</h4>
       <div class="dec-list">
         <div class="dec"><span class="dec-n">01</span><div class="dec-body">
-          <b>定位反「玄学黑箱」。</b>产品定位为「性格匹配 / 情感分析 / 相处洞察」，传统命理只是其中一路特征信号；
+          <b>定位反「玄学黑箱」。</b>产品定位为「性格匹配 / 情感分析 / 相处洞察」，纯性格型号驱动、不做黑箱套话；
           底层不做 mock 套话、每一分可追溯，这是这类产品站得住的前提。</div></div>
         <div class="dec"><span class="dec-n">02</span><div class="dec-body">
-          <b>透明算分，可验证才可信。</b>缘分指数 = 印记契合（八字四柱）70% + 型号匹配（4 维度）30% + 关系加成，
-          每一分摊开给用户看。可验证 = 可信任 = 可分享。</div></div>
+          <b>透明算分，可验证才可信。</b>契合指数 = 型号 4 维度匹配 + 关系状态加成，
+          每一项贡献分摊开给用户看，明细相加严格等于总分。可验证 = 可信任 = 可分享。</div></div>
         <div class="dec"><span class="dec-n">03</span><div class="dec-body">
-          <b>命理逻辑真做。</b>用 lunar 真排盘 + 五行生克 / 四柱加权的确定性逻辑在本地算，
-          而非套话生成，这是结果可信度的地基。</div></div>
+          <b>描述→判型，不让用户自己选。</b>用确定性算法把原型 / 性格标签 / 一句话描述判定成 4 字母型号（同输入同结果），
+          再用牵红线小游戏揭晓——把「被算法看穿」做成有仪式感的钩子。</div></div>
         <div class="dec"><span class="dec-n">04</span><div class="dec-body">
           <b>3 段心里话：emotion + focus 双锚点。</b>解决 LLM 写情感文案两大病——三段一个调、瞎编一次性事件。
           用情绪锚（想念→不安→渴望）加素材切面分轨，禁止「你昨天做了 X」这类穿帮断言，只改写 TA 的习惯模式。</div></div>
@@ -497,8 +497,8 @@
           <b>4 选 1 干扰项同源生成。</b>旧版从固定池随机抽，干扰项跟此刻处境无关、像盲猜；
           改为后端 prompt 同步输出 3 个「同处境同语气、不同动机」的干扰项，4 选 1 才有真推理感。</div></div>
         <div class="dec"><span class="dec-n">06</span><div class="dec-body">
-          <b>报告 = 增长引擎，不是结论页。</b>截图金句 + 一键邀 TA 反测 + 打脸对照，为朋友圈 / 小红书自传播专门设计；
-          埋点全链路落盘，后台实时看转化分布。</div></div>
+          <b>报告 = 增长引擎，不是结论页。</b>canvas 生成的契合分享卡（截图金句 + CP 名）+ 问 TA 实时回话 + 一键邀 TA 反测，
+          为朋友圈 / 小红书自传播专门设计；北极星就是主动分享率。</div></div>
       </div>
     </div>
 
@@ -506,7 +506,7 @@
       <span class="tag">multi-agent</span>
       <span class="tag">prompt eval</span>
       <span class="tag">LLM-as-judge</span>
-      <span class="tag">lunar-bazi</span>
+      <span class="tag">确定性算分</span>
       <span class="tag">type-system</span>
       <span class="tag">viral-by-design</span>
     </div>
