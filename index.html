@@ -318,7 +318,7 @@
   <h1 class="hero-name">产品作品集<span class="en">Selected Work</span></h1>
   <p class="hero-tagline">想清楚问题，再亲手把它<em>做到上线</em>。</p>
   <p class="hero-lead">四个 0→1 的独立项目，需求、设计、工程、Prompt <b>一个人全包</b>，三个已上线、点开即用。
-    不讲 PPT、不堆概念——RisingDeck 用回测打赢 baseline，测对儿让多个 AI 互相把关，<b>该较真的地方就用 eval 让数字说话</b>。</p>
+    不讲 PPT、不堆概念——测对儿让多个 AI 互相把关、Envoy 让两个 agent 替人把事谈拢，<b>该较真的地方就用 eval 让数字说话</b>。</p>
   <div class="hero-meta">
     <span class="chip">🛠 策略 · AIGC · 0→1 · eval 驱动</span>
   </div>
@@ -329,7 +329,7 @@
   <div class="sec-head">
     <div class="eyebrow">Projects</div>
     <h2>项目经历</h2>
-    <div class="sub">五个独立项目，端到端涵盖产品、设计、工程、Prompt。<span class="nb">都已上线</span>、<span class="nb">可点开真用</span>。</div>
+    <div class="sub">四个独立项目，端到端涵盖产品、设计、工程、Prompt。<span class="nb">都已上线</span>、<span class="nb">可点开真用</span>。</div>
   </div>
 
   <!-- 百城花信 -->
@@ -396,40 +396,6 @@
         <span class="tag">Canvas 粒子</span>
         <span class="tag">PWA</span>
         <a class="case-link" href="https://ziyi125229.github.io/still-room/" target="_blank">进入静室 ↗</a>
-      </div>
-    </div>
-  </article>
-
-  <!-- RisingDeck (Kickstarter) -->
-  <article class="pblock">
-    <div class="pthumb t-rd">
-      <img class="pshot" src="shots/risingdeck.jpg" alt="RisingDeck · Kickstarter 上升品类预测榜实时榜单截图，top-5 命中率 33%" loading="lazy">
-      <div class="pthumb-cap">
-        <div class="pstat-big">33%</div>
-        <div class="pstat-label">top-5 命中率 · 季节性基准 15% · 照搬上月 5%</div>
-      </div>
-    </div>
-    <div class="pbody">
-      <div class="pb-head">
-        <div>
-          <div class="pb-title">RisingDeck</div>
-          <div class="pb-sub">Kickstarter 上升品类预测榜 · 数据产品</div>
-        </div>
-        <span class="status live"><span class="sdot"></span>已上线</span>
-      </div>
-      <p class="pb-pitch">用 Kickstarter 早期领先指标，提前 1–2 个月预测下个<b>升温的子品类</b>，每月公开预测并公示真实命中率。
-        <b>核心不是产品，是 eval</b>，回测 top-5 命中率能不能打赢 naive baseline。</p>
-      <div class="pb-dec">
-        <div class="d"><span><b>防时间泄漏是地基。</b>所有取数走唯一 <span class="mono">Panel.as_of(date)</span> 闸口，walk-forward 滚动回测，绕过即视为 bug。</span></div>
-        <div class="d"><span><b>同口径打基准。</b>主指标 top-5 命中率，与 persistence 和 seasonal 两个 naive baseline 同一 scorer 对比，后 24 个月滚动评估。</span></div>
-        <div class="d"><span><b>两段式落地。</b>点开品类再预测「这一类里进行中的项目谁最可能达成目标」，结果未揭晓、是真预测；上月战绩对错全公示。</span></div>
-      </div>
-      <div class="pb-foot">
-        <span class="tag">LightGBM ranker</span>
-        <span class="tag">walk-forward</span>
-        <span class="tag">backtest eval</span>
-        <span class="tag">Python · Vercel</span>
-        <a class="case-link" href="https://web-ziyis-projects-0a341155.vercel.app" target="_blank">看实时榜单 ↗</a>
       </div>
     </div>
   </article>
@@ -563,7 +529,7 @@
       <div class="ap-d">每个决策前先问「这个为谁解决什么」。用 office-hours 六问、premortem 找飞轮反向，宁可砍掉一个 feature 也不做模糊需求。</div></div>
     <div class="ap"><div class="ap-n">02</div>
       <div class="ap-t">eval 是地基，不是补救</div>
-      <div class="ap-d">AI 产品没有 eval 就只能靠 vibe。一开始就建可量化指标、同口径 baseline 与 LLM-as-judge，每次迭代都跑分、留痕可复盘——大模型评测项目的 70→92 和 RisingDeck 的 33% vs 5% 都是这么来的。</div></div>
+      <div class="ap-d">AI 产品没有 eval 就只能靠 vibe。一开始就建可量化指标、同口径 baseline 与 LLM-as-judge，每次迭代都跑分、留痕可复盘——大模型评测项目的 70→92、测对儿用 multi-agent 把 JSON 解析失败率从 12% 压到 2% 都是这么来的。</div></div>
     <div class="ap"><div class="ap-n">03</div>
       <div class="ap-t">端到端，亲手做完一遍</div>
       <div class="ap-d">PM + Design + Eng + Prompt 一个人闭环。不是炫技，是「懂代价」才能做出「懂代价的决策」。</div></div>
