@@ -75,15 +75,8 @@
 
   /* hero */
   .hero{padding:104px 0 84px}
-  .status-pill{display:inline-flex;align-items:center;gap:8px;font-size:13px;color:var(--text-sec);
-    border:1px solid var(--border);border-radius:999px;padding:6px 14px;margin-bottom:34px;background:var(--surface)}
-  .status-pill .dot{width:7px;height:7px;border-radius:50%;background:var(--live);
-    box-shadow:0 0 0 4px rgba(22,163,74,.14);animation:pulse 2.6s ease-in-out infinite}
-  @keyframes pulse{0%,100%{box-shadow:0 0 0 4px rgba(22,163,74,.14)}50%{box-shadow:0 0 0 7px rgba(22,163,74,.05)}}
   .hero-name{font-family:var(--serif);font-size:84px;line-height:1;font-weight:600;letter-spacing:-.03em;margin-bottom:14px}
   .hero-name .en{font-size:24px;font-style:italic;font-weight:400;color:var(--text-dim);margin-left:14px;letter-spacing:0;vertical-align:middle}
-  .hero-role{font-size:14px;color:var(--text-mu);letter-spacing:.05em;font-weight:600;margin-bottom:30px}
-  .hero-role b{color:var(--accent);font-weight:600}
   .hero-tagline{font-family:var(--serif);font-size:31px;line-height:1.3;font-weight:500;color:var(--text);margin-bottom:24px;letter-spacing:-.01em}
   .hero-tagline em{font-style:italic;color:var(--accent)}
   .hero-lead{font-size:17px;color:var(--text-sec);max-width:680px;line-height:1.78}
@@ -93,34 +86,6 @@
     border:1px solid var(--border);border-radius:999px;padding:6px 14px;white-space:nowrap}
 
   section{padding:78px 0;border-top:1px solid var(--border)}
-
-  /* education */
-  .edu{display:grid;grid-template-columns:160px 1fr;gap:34px;padding:26px 0;border-top:1px solid var(--border)}
-  .edu:first-child{border-top:none;padding-top:0}
-  .edu-date{font-family:var(--mono);font-size:13px;color:var(--text-mu);padding-top:5px;white-space:nowrap}
-  .edu-school{font-size:19px;font-weight:600;letter-spacing:-.015em}
-  .edu-school .rank{display:inline-block;font-size:11px;color:var(--crimson);background:rgba(168,50,74,.07);
-    border:1px solid rgba(168,50,74,.16);border-radius:5px;padding:2px 8px;font-weight:600;margin-left:8px;
-    vertical-align:middle;white-space:nowrap}
-  .edu-major{font-size:14.5px;color:var(--text-sec);margin:5px 0 10px}
-  .edu-courses{font-size:13px;color:var(--text-mu);line-height:1.8}
-
-  /* ===== EXPERIENCE timeline ===== */
-  .exp-list{display:flex;flex-direction:column}
-  .exp{display:grid;grid-template-columns:160px 1fr;gap:34px;padding:30px 0;border-top:1px solid var(--border)}
-  .exp:first-child{border-top:none;padding-top:0}
-  .exp-date{font-family:var(--mono);font-size:13px;color:var(--text-mu);padding-top:6px;letter-spacing:.01em;white-space:nowrap}
-  .exp-co{font-size:21px;font-weight:600;margin-bottom:5px;letter-spacing:-.015em}
-  .exp-co .badge{display:inline-block;font-size:10.5px;color:var(--accent);
-    background:var(--accent-soft);border-radius:5px;padding:2px 8px;font-weight:600;
-    letter-spacing:.04em;margin-left:8px;vertical-align:middle;white-space:nowrap}
-  .exp-role{font-size:14.5px;color:var(--text-sec);margin-bottom:16px}
-  .exp-bullets{display:flex;flex-direction:column;gap:11px;margin-bottom:16px}
-  .exp-bullet{display:flex;gap:12px;font-size:14px;color:var(--text-sec);line-height:1.72}
-  .exp-bullet::before{content:"";flex:none;width:14px;height:1px;background:var(--text-dim);margin-top:13px}
-  .exp-bullet b{color:var(--text);font-weight:600}
-  .exp-bullet .hl{color:var(--accent);font-weight:600;white-space:nowrap}
-  .exp-tags{display:flex;flex-wrap:wrap;gap:6px}
 
   /* ===== FEATURED case study ===== */
   .featured{background:var(--surface);border:1px solid var(--border);border-radius:18px;padding:44px;
@@ -190,24 +155,6 @@
   .ap-t{font-size:16px;font-weight:600;margin-bottom:8px}
   .ap-d{font-size:14px;color:var(--text-sec);line-height:1.72}
 
-  /* skills */
-  .skills{display:flex;flex-direction:column;gap:18px}
-  .sk-row{display:grid;grid-template-columns:120px 1fr;gap:24px;align-items:start;padding-bottom:18px;border-bottom:1px solid var(--border)}
-  .sk-row:last-child{border-bottom:none;padding-bottom:0}
-  .sk-label{font-size:13px;color:var(--text-mu);letter-spacing:.06em;text-transform:uppercase;font-weight:700;padding-top:4px;white-space:nowrap}
-  .sk-vals{display:flex;flex-wrap:wrap;gap:7px}
-  .sk-vals .desc{font-size:14.5px;color:var(--text-sec);line-height:1.72}
-
-  /* contact */
-  .contact{display:flex;flex-wrap:wrap;gap:12px}
-  .ct{display:flex;align-items:center;gap:14px;border:1px solid var(--border);border-radius:12px;
-    padding:18px 22px;background:var(--surface);min-width:240px;transition:border-color .2s}
-  .ct:hover{border-color:var(--border-hi)}
-  .ct-icon{width:34px;height:34px;border-radius:8px;background:var(--accent-soft);display:flex;
-    align-items:center;justify-content:center;color:var(--accent);font-size:15px;font-weight:600;flex:none}
-  .ct-label{font-size:11px;color:var(--text-mu);letter-spacing:.06em;text-transform:uppercase;font-weight:700;margin-bottom:2px}
-  .ct-val{font-size:14px;font-family:var(--mono)}
-
   footer{padding:54px 0 70px;border-top:1px solid var(--border);color:var(--text-mu);font-size:13px;
     display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px}
 
@@ -221,8 +168,6 @@
     .case-grid,.approach{grid-template-columns:1fr}
     .pblock{grid-template-columns:1fr}
     .pthumb{min-height:170px;border-right:none;border-bottom:1px solid var(--border)}
-    .exp,.edu,.sk-row{grid-template-columns:1fr;gap:8px;padding:22px 0}
-    .exp-date,.edu-date,.sk-label{padding-top:0}
     .nav-links{gap:14px;font-size:13px}
     section{padding:54px 0}
     .featured{padding:28px 22px}
@@ -233,18 +178,18 @@
 
   /* ===== taste pass · 动效 / 触感 / 质感 / 排版精修 ===== */
   :focus-visible{outline:2px solid var(--accent);outline-offset:3px;border-radius:5px}
-  .mono,.hl,.pstat-big,.exp-date,.edu-date,.case-url,.pb-sub,.cell-val{font-variant-numeric:tabular-nums}
-  .hero-name,.hero-tagline,.sec-head h2,.case-title,.pb-title,.exp-co,.edu-school{text-wrap:balance}
-  .hero-lead,.case-pitch,.pb-pitch,.ap-d,.sec-head .sub,.dec-body,.exp-bullet,.edu-courses{text-wrap:pretty}
+  .mono,.pstat-big,.case-url,.pb-sub,.cell-val{font-variant-numeric:tabular-nums}
+  .hero-name,.hero-tagline,.sec-head h2,.case-title,.pb-title{text-wrap:balance}
+  .hero-lead,.case-pitch,.pb-pitch,.ap-d,.sec-head .sub,.dec-body{text-wrap:pretty}
   section[id]{scroll-margin-top:84px}
 
   /* 触感：抬升 + 染色阴影 + 按下回弹 */
-  .featured,.pblock,.ap,.ct{transition:opacity .6s cubic-bezier(.2,.7,.2,1),
+  .featured,.pblock,.ap{transition:opacity .6s cubic-bezier(.2,.7,.2,1),
     transform .4s cubic-bezier(.2,.7,.2,1),box-shadow .35s ease,border-color .25s ease}
   .featured:hover,.pblock:hover{transform:translateY(-3px);
     box-shadow:0 20px 44px -26px rgba(40,34,90,.42),0 2px 0 var(--border)}
-  .ap:hover,.ct:hover{transform:translateY(-2px);box-shadow:0 14px 30px -22px rgba(40,34,90,.38)}
-  a.ct:active,.featured:active,.pblock:active{transform:translateY(-1px) scale(.997)}
+  .ap:hover{transform:translateY(-2px);box-shadow:0 14px 30px -22px rgba(40,34,90,.38)}
+  .featured:active,.pblock:active{transform:translateY(-1px) scale(.997)}
   .case-link,.nav-links a{transition:color .15s ease,transform .15s ease}
   .case-link:active,.nav-links a:active{transform:translateY(1px)}
   .pshot{transition:transform .5s cubic-bezier(.2,.7,.2,1)}
@@ -255,24 +200,24 @@
     background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='150' height='150'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='2' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");background-size:150px 150px}
 
   /* 首屏入场 */
-  .js .hero .status-pill,.js .hero-name,.js .hero-role,.js .hero-tagline,.js .hero-lead,.js .hero-meta{
+  .js .hero-name,.js .hero-tagline,.js .hero-lead,.js .hero-meta{
     opacity:0;animation:heroUp .7s cubic-bezier(.2,.7,.2,1) forwards}
-  .js .hero-name{animation-delay:.05s}.js .hero-role{animation-delay:.11s}
+  .js .hero-name{animation-delay:.05s}
   .js .hero-tagline{animation-delay:.17s}.js .hero-lead{animation-delay:.25s}.js .hero-meta{animation-delay:.33s}
   @keyframes heroUp{from{opacity:0;transform:translateY(14px)}to{opacity:1;transform:none}}
 
   /* 滚动逐段淡入（隐藏态仅在未进入视口时生效，避免压制 hover） */
-  .sec-head,.edu,.sk-row{transition:opacity .6s cubic-bezier(.2,.7,.2,1),transform .6s cubic-bezier(.2,.7,.2,1)}
-  .js .sec-head:not(.is-in),.js .edu:not(.is-in),.js .exp:not(.is-in),.js .pblock:not(.is-in),
-  .js .featured:not(.is-in),.js .ap:not(.is-in),.js .sk-row:not(.is-in),.js .ct:not(.is-in){
+  .sec-head{transition:opacity .6s cubic-bezier(.2,.7,.2,1),transform .6s cubic-bezier(.2,.7,.2,1)}
+  .js .sec-head:not(.is-in),.js .pblock:not(.is-in),
+  .js .featured:not(.is-in),.js .ap:not(.is-in){
     opacity:0;transform:translateY(18px)}
 
   @media (prefers-reduced-motion:reduce){
     *,*::before,*::after{animation-duration:.001ms!important;animation-iteration-count:1!important;
       transition-duration:.001ms!important;scroll-behavior:auto!important}
     .grain{display:none}
-    .js .sec-head,.js .edu,.js .exp,.js .pblock,.js .featured,.js .ap,.js .sk-row,.js .ct,
-    .js .hero .status-pill,.js .hero-name,.js .hero-role,.js .hero-tagline,.js .hero-lead,.js .hero-meta{
+    .js .sec-head,.js .pblock,.js .featured,.js .ap,
+    .js .hero-name,.js .hero-tagline,.js .hero-lead,.js .hero-meta{
       opacity:1!important;transform:none!important;animation:none!important}
   }
 
@@ -297,7 +242,7 @@
   /* 卡片：常驻柔和投影 + 更大圆角 */
   .featured,.pblock{border-radius:22px;
     box-shadow:0 1px 2px rgba(40,34,90,.05),0 18px 40px -26px rgba(40,34,90,.22)}
-  .ap,.ct,.case-cell{border-radius:14px}
+  .ap,.case-cell{border-radius:14px}
 </style>
 </head>
 <body>
@@ -547,7 +492,7 @@
 <!-- 滚动逐段淡入 -->
 <script>
 (function(){
-  var sel='.sec-head,.edu,.exp,.pblock,.featured,.ap,.sk-row,.ct';
+  var sel='.sec-head,.pblock,.featured,.ap';
   var els=[].slice.call(document.querySelectorAll(sel));
   document.querySelectorAll('section').forEach(function(sec){
     [].slice.call(sec.querySelectorAll(sel)).forEach(function(el,i){
