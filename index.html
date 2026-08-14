@@ -274,25 +274,20 @@
   body{background:linear-gradient(180deg,#fbf8ff 0,#fffcff 31%,#fffcff 100%)}
   nav{background:rgba(255,252,255,.82)}
   .nav-brand{font-family:var(--serif);font-size:18px;color:var(--accent-ink)}
-  .hero{max-width:1080px;padding:82px 32px 90px;display:grid;grid-template-columns:1.05fr .95fr;gap:54px;align-items:center}
+  .hero{max-width:1080px;padding:82px 32px 90px;display:grid;grid-template-columns:1.14fr .86fr;gap:54px;align-items:center}
   .hero-copy{position:relative;z-index:1}
   .hero-name{font-size:75px;color:var(--accent-ink);margin-bottom:16px}
   .hero-name::before{left:130px;width:470px;height:310px;background:radial-gradient(50% 50% at 50% 50%,rgba(190,164,229,.34),transparent 70%)}
   .hero-role{font-size:15px;letter-spacing:.14em;text-transform:uppercase;font-weight:700;color:var(--accent);margin-bottom:18px}
   .hero-tagline{font-size:33px;max-width:520px}
-  .hero-visual{height:420px;position:relative}
-  .portrait{position:absolute;left:20px;top:24px;width:236px;height:300px;border-radius:120px 120px 28px 28px;object-fit:cover;object-position:center;border:8px solid #fff;box-shadow:0 22px 42px rgba(96,65,132,.18);z-index:3}
-  .memory{position:absolute;border:7px solid #fff;object-fit:cover;box-shadow:0 15px 30px rgba(96,65,132,.14)}
-  .memory.one{width:182px;height:134px;right:5px;top:0;border-radius:28px 28px 28px 5px;transform:rotate(4deg)}
-  .memory.two{width:173px;height:124px;right:0;bottom:22px;border-radius:8px 28px 28px 28px;transform:rotate(-5deg)}
-  .visual-note{position:absolute;z-index:4;left:195px;bottom:10px;background:#e5daf8;color:var(--accent-ink);padding:13px 16px;border-radius:18px 18px 18px 4px;font-size:13px;font-weight:600;box-shadow:0 10px 24px rgba(96,65,132,.12);transform:rotate(-3deg)}
-  .spark{position:absolute;width:92px;height:92px;right:154px;top:126px;border-radius:50%;background:linear-gradient(135deg,#d9ecff,#dfcdf5);z-index:1}
-  .intro{padding:76px 0;border-top:1px solid var(--border)}
-  .intro-grid{display:grid;grid-template-columns:1fr 1fr;gap:18px}
-  .intro-card{background:var(--surface);border:1px solid var(--border);border-radius:20px;padding:31px;box-shadow:0 16px 35px -30px rgba(74,42,109,.35)}
-  .intro-icon{width:38px;height:38px;display:grid;place-items:center;border-radius:12px;background:linear-gradient(135deg,#edddf8,#e1efff);font-size:19px;margin-bottom:22px}
-  .intro-card h3{font-family:var(--serif);font-size:28px;font-weight:500;margin-bottom:12px;color:var(--accent-ink)}
-  .intro-card p{font-size:15px;color:var(--text-sec);line-height:1.8;max-width:370px}
+  .hero-visual{height:420px;position:relative;display:grid;place-items:center}
+  .portrait{width:276px;height:356px;border-radius:138px 138px 30px 30px;object-fit:cover;object-position:center;border:8px solid #fff;box-shadow:0 22px 42px rgba(96,65,132,.18);z-index:3}
+  .spark{position:absolute;width:116px;height:116px;right:4px;top:42px;border-radius:50%;background:linear-gradient(135deg,#d9ecff,#dfcdf5);z-index:1}
+  .intro-grid{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:23px}
+  .intro-card{background:var(--surface);border:1px solid var(--border);border-radius:14px;padding:15px 16px;box-shadow:0 12px 28px -28px rgba(74,42,109,.35)}
+  .intro-icon{display:inline;font-size:14px;color:var(--accent);margin-right:5px}
+  .intro-card h2{display:inline;font-size:14px;font-weight:650;color:var(--accent-ink)}
+  .intro-card p{font-size:12.5px;color:var(--text-sec);line-height:1.65;margin-top:7px}
   .featured{background:linear-gradient(145deg,#fff,#fbf7ff);border-color:#dfd2ec}
   .pthumb{border-right-color:var(--border)}
   .approach{grid-template-columns:repeat(5,1fr);gap:10px;position:relative}
@@ -301,7 +296,7 @@
   .ap-t{font-family:var(--serif);font-size:20px;color:var(--accent-ink)}
   .ap-d{font-size:13px;line-height:1.65}
   @media (max-width:760px){
-    .hero{display:block;padding:58px 24px 62px}.hero-name{font-size:58px}.hero-tagline{font-size:27px}.hero-visual{height:348px;margin-top:28px}.portrait{left:0;width:196px;height:256px}.memory.one{width:152px;height:112px}.memory.two{width:144px;height:104px}.visual-note{left:145px}.intro-grid,.approach{grid-template-columns:1fr}.intro{padding:54px 0}.approach{gap:12px}
+    .hero{display:block;padding:58px 24px 62px}.hero-name{font-size:58px}.hero-tagline{font-size:27px}.hero-visual{height:326px;margin-top:34px}.portrait{width:222px;height:286px}.intro-grid,.approach{grid-template-columns:1fr}.approach{gap:12px}
   }
 </style>
 </head>
@@ -312,7 +307,6 @@
   <div class="nav-inner">
     <div class="nav-brand">紫翊 <span class="dim">· Product Manager</span></div>
     <div class="nav-links">
-      <a href="#about">关于我</a>
       <a href="#projects">项目</a>
       <a href="#approach">方法</a>
     </div>
@@ -327,36 +321,22 @@
     <p class="hero-tagline">把复杂问题，做成让人愿意靠近的<em>产品体验</em>。</p>
     <p class="hero-lead">我关注真实的人、具体的场景和能被验证的结果。从洞察、方案到上线，把想法认真做成可以被使用的产品。</p>
     <div class="hero-meta"><span class="chip">策略 · AIGC · 0→1 · eval 驱动</span></div>
+    <div class="intro-grid" aria-label="关于我">
+      <article class="intro-card">
+        <div><span class="intro-icon">✦</span><h2>我相信的产品观</h2></div>
+        <p>先理解人，再解决问题。体验有温度，结果也经得起验证。</p>
+      </article>
+      <article class="intro-card">
+        <div><span class="intro-icon">⌁</span><h2>我擅长的事</h2></div>
+        <p>把模糊想法拆成可验证的路径，再亲手推到上线。</p>
+      </article>
+    </div>
   </div>
-  <div class="hero-visual" aria-label="紫翊与项目作品拼贴">
+  <div class="hero-visual" aria-label="紫翊的个人照片">
     <div class="spark" aria-hidden="true"></div>
     <img class="portrait" src="https://avatars.githubusercontent.com/u/275959235?v=4" alt="紫翊的个人照片">
-    <img class="memory one" src="shots/baicheng.jpg" alt="百城花信项目截图">
-    <img class="memory two" src="shots/stillroom.jpg" alt="静室项目截图">
-    <div class="visual-note">从好奇心，到可用的产品 ✦</div>
   </div>
 </header>
-
-<!-- ABOUT -->
-<section id="about" class="intro wrap">
-  <div class="sec-head">
-    <div class="eyebrow">A little about me</div>
-    <h2>关于我</h2>
-    <div class="sub">不只把事情做完，也在意它是否真正被理解、被使用。</div>
-  </div>
-  <div class="intro-grid">
-    <article class="intro-card">
-      <div class="intro-icon">✦</div>
-      <h3>我相信的产品观</h3>
-      <p>好产品从对人的理解开始。先把问题看清楚，再用克制、真诚的方式解决它；体验有温度，结果也经得起验证。</p>
-    </article>
-    <article class="intro-card">
-      <div class="intro-icon">⌁</div>
-      <h3>我擅长的事</h3>
-      <p>把模糊的想法拆成可验证的路径：洞察需求、设计体验、搭建原型、定义评测，再亲手把它推到真正上线。</p>
-    </article>
-  </div>
-</section>
 
 <!-- PROJECTS -->
 <section id="projects" class="wrap">
