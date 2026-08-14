@@ -3,7 +3,6 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<script>document.documentElement.className+=' js'</script>
 <title>产品作品集 · Selected Product Work</title>
 <meta name="description" content="四个独立项目，端到端涵盖产品、设计、工程、Prompt；附我做产品的方法。eval 驱动、0→1、亲手做到上线。">
 <link rel="canonical" href="https://ziyi125229.github.io/portfolio/">
@@ -196,77 +195,37 @@
     .case-head{flex-direction:column;align-items:flex-start}
   }
 
-  /* ===== taste pass · 动效 / 触感 / 质感 / 排版精修 ===== */
+  /* ===== 排版与交互精修 ===== */
   :focus-visible{outline:2px solid var(--accent);outline-offset:3px;border-radius:5px}
   .mono,.pstat-big,.case-url,.pb-sub,.cell-val{font-variant-numeric:tabular-nums}
   .hero-name,.hero-tagline,.sec-head h2,.case-title,.pb-title{text-wrap:balance}
   .hero-lead,.case-pitch,.pb-pitch,.ap-d,.sec-head .sub,.dec-body{text-wrap:pretty}
   section[id]{scroll-margin-top:84px}
 
-  /* 触感：抬升 + 染色阴影 + 按下回弹 */
-  .featured,.pblock,.ap{transition:opacity .6s cubic-bezier(.2,.7,.2,1),
-    transform .4s cubic-bezier(.2,.7,.2,1),box-shadow .35s ease,border-color .25s ease}
-  .featured:hover,.pblock:hover{transform:translateY(-3px);
-    box-shadow:0 20px 44px -26px rgba(40,34,90,.42),0 2px 0 var(--border)}
-  .ap:hover{transform:translateY(-2px);box-shadow:0 14px 30px -22px rgba(40,34,90,.38)}
-  .featured:active,.pblock:active{transform:translateY(-1px) scale(.997)}
-  .case-link,.nav-links a{transition:color .15s ease,transform .15s ease}
-  .case-link:active,.nav-links a:active{transform:translateY(1px)}
-  .pshot{transition:transform .5s cubic-bezier(.2,.7,.2,1)}
-  .pblock:hover .pshot{transform:scale(1.04)}
-
-  /* 颗粒质感 */
-  .grain{position:fixed;inset:0;z-index:60;pointer-events:none;opacity:.04;mix-blend-mode:multiply;
-    background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='150' height='150'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='2' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");background-size:150px 150px}
-
-  /* 首屏入场 */
-  .js .hero-name,.js .hero-tagline,.js .hero-lead,.js .hero-meta{
-    opacity:0;animation:heroUp .7s cubic-bezier(.2,.7,.2,1) forwards}
-  .js .hero-name{animation-delay:.05s}
-  .js .hero-tagline{animation-delay:.17s}.js .hero-lead{animation-delay:.25s}.js .hero-meta{animation-delay:.33s}
-  @keyframes heroUp{from{opacity:0;transform:translateY(14px)}to{opacity:1;transform:none}}
-
-  /* 滚动逐段淡入（隐藏态仅在未进入视口时生效，避免压制 hover） */
-  .sec-head{transition:opacity .6s cubic-bezier(.2,.7,.2,1),transform .6s cubic-bezier(.2,.7,.2,1)}
-  .js .sec-head:not(.is-in),.js .pblock:not(.is-in),
-  .js .featured:not(.is-in),.js .ap:not(.is-in){
-    opacity:0;transform:translateY(18px)}
+  .featured,.pblock,.ap{transition:border-color .2s ease,box-shadow .2s ease}
+  .featured:hover,.pblock:hover{border-color:var(--border-hi);box-shadow:0 2px 10px rgba(28,25,23,.05)}
+  .ap:hover{border-color:var(--border-hi)}
+  .case-link,.nav-links a{transition:color .15s ease}
+  .pshot{transition:transform .6s ease}
+  .pblock:hover .pshot{transform:scale(1.02)}
 
   @media (prefers-reduced-motion:reduce){
     *,*::before,*::after{animation-duration:.001ms!important;animation-iteration-count:1!important;
       transition-duration:.001ms!important;scroll-behavior:auto!important}
-    .grain{display:none}
-    .js .sec-head,.js .pblock,.js .featured,.js .ap,
-    .js .hero-name,.js .hero-tagline,.js .hero-lead,.js .hero-meta{
-      opacity:1!important;transform:none!important;animation:none!important}
   }
 
-  /* ===== 可见重塑 · 编号区块 / 关键词高亮 / 卡片纵深 ===== */
+  /* 编号区块 */
   body{counter-reset:sec}
   section{border-top:none}
   .sec-head{counter-increment:sec;border-top:1px solid var(--border-hi);padding-top:36px;margin-bottom:46px}
-  #education .sec-head{border-top:none;padding-top:0}
   .sec-head .eyebrow::before{content:counter(sec,decimal-leading-zero) "  ·  ";color:var(--text-dim);font-weight:700}
   .sec-head h2{font-size:46px}
 
-  /* hero：名字背后的柔光 + 关键词高亮底纹 */
-  .hero{position:relative;isolation:isolate}
-  .hero-name{position:relative}
-  .hero-name::before{content:"";position:absolute;z-index:-1;left:135px;top:50%;transform:translate(-50%,-50%);
-    width:500px;height:300px;pointer-events:none;
-    background:radial-gradient(50% 50% at 50% 50%,rgba(67,56,202,.16),transparent 70%)}
-  @media (max-width:760px){.hero-name::before{left:84px;width:340px;height:210px}}
-  .hero-tagline em{background-image:linear-gradient(transparent 56%,rgba(67,56,202,.18) 56% 93%,transparent 93%);
-    background-repeat:no-repeat;padding:0 .1em;border-radius:2px}
-
-  /* 卡片：常驻柔和投影 + 更大圆角 */
-  .featured,.pblock{border-radius:22px;
-    box-shadow:0 1px 2px rgba(40,34,90,.05),0 18px 40px -26px rgba(40,34,90,.22)}
-  .ap,.case-cell{border-radius:14px}
+  .featured,.pblock{border-radius:16px}
+  .ap,.case-cell{border-radius:12px}
 </style>
 </head>
 <body>
-<div class="grain" aria-hidden="true"></div>
 
 <nav aria-label="主导航">
   <div class="nav-inner">
@@ -285,7 +244,7 @@
   <p class="hero-lead">四个 0→1 的独立项目，需求、设计、工程、Prompt <b>一个人全包</b>，三个已上线、点开即用。
     不讲 PPT、不堆概念——测对儿让多个 AI 互相把关、Envoy 让两个 agent 替人把事谈拢，<b>该较真的地方就用 eval 让数字说话</b>。</p>
   <div class="hero-meta">
-    <span class="chip">🛠 策略 · AIGC · 0→1 · eval 驱动</span>
+    <span class="chip">策略 · AIGC · 0→1 · eval 驱动</span>
   </div>
 </header>
 
@@ -307,10 +266,10 @@
       <span class="status live"><span class="sdot"></span>已上线 · 可试玩</span>
     </div>
 
-    <p class="case-pitch">用 AI 测两个人的关系底色，恋爱、友情都能测。产出是
-      <b>关系型号（类 MBTI）+ 逐项可验证的契合指数 + 7 个 Agent 实时写给彼此的 3 段心里话</b>；
+    <p class="case-pitch">用 AI 测两个人的关系底色，恋爱、友情都能测。产出是关系型号（类 MBTI）、
+      逐项<b>可验证的契合指数</b>，加上 7 个 Agent 实时写给彼此的 3 段心里话；
       纯性格型号驱动、不掺玄学，定位在「性格匹配 / 情感分析 / 相处洞察」。
-      报告主打「分享卡截图金句 + 问 TA 实时回话 + 一键邀 TA 反测」做自传播引擎。</p>
+      报告主打分享卡截图金句、问 TA 实时回话、一键邀 TA 反测，本身就是一台自传播引擎。</p>
 
     <div class="case-grid">
       <div class="case-cell"><div class="cell-label">Role</div>
@@ -508,29 +467,6 @@
   <div>© 2026 · 产品作品集 · Selected Work</div>
   <div class="mono">made by hand · single file</div>
 </footer>
-
-<!-- 滚动逐段淡入 -->
-<script>
-(function(){
-  var sel='.sec-head,.pblock,.featured,.ap';
-  var els=[].slice.call(document.querySelectorAll(sel));
-  document.querySelectorAll('section').forEach(function(sec){
-    [].slice.call(sec.querySelectorAll(sel)).forEach(function(el,i){
-      el.style.transitionDelay=(Math.min(i,6)*55)+'ms';
-    });
-  });
-  if(!('IntersectionObserver' in window)){ els.forEach(function(el){el.classList.add('is-in');}); return; }
-  var io=new IntersectionObserver(function(entries){
-    entries.forEach(function(e){
-      if(e.isIntersecting){
-        var t=e.target; t.classList.add('is-in'); io.unobserve(t);
-        setTimeout(function(){ t.style.transitionDelay=''; },800);
-      }
-    });
-  },{rootMargin:'0px 0px -7% 0px',threshold:.06});
-  els.forEach(function(el){ io.observe(el); });
-})();
-</script>
 
 </body>
 </html>
