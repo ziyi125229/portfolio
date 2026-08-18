@@ -8,5 +8,5 @@
 收录项目：百城花信、静室 Still Room、Envoy（多 Agent 代理协作）、测对儿。
 
 可现场试玩的 AI demo：
-- 测对儿(关系契合度 · 实时多智能体)：https://cedui-demo.vercel.app
+- 测对儿(关系契合度 · 实时多智能体)：https://cedui.vercel.app
 - Envoy(派我的 Agent 去对齐 · 实时协商)：https://envoy-demo-kappa.vercel.app
